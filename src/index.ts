@@ -59,3 +59,17 @@ function disableButton() {
 }
 
 initializeTimer();
+
+const buttons = document.querySelectorAll<HTMLButtonElement>(".tariff__button");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const parentArticle = button.closest<HTMLElement>("article");
+    const title =
+      parentArticle?.querySelector<HTMLHeadingElement>("h3.tariff__title");
+
+    if (title) {
+      console.log(title.textContent);
+    }
+  });
+});
