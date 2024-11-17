@@ -7,12 +7,12 @@
   </head>
   <body>
     <header class="header">
-      <h5 class="header__subtitle">выберите лучший</h5>
+      <h2 class="header__subtitle">Выберите лучший</h2>
       <h1 class="header__title">Актуальные тарифы</h1>
     </header>
     <main class="tariffs">
-      <article class="tariff tariffs__tariff tariffs__tariff--consultation">
-        <header class="tariff__icon">
+      <article class="tariff tariff--consultation">
+        <header class="tariff__header">
           <svg
             width="80"
             height="80"
@@ -52,21 +52,23 @@
             </defs>
           </svg>
           <h3 class="tariff__title">Консультация</h3>
-          <h5 class="tariff__subtitle">Основные вопросы и направления</h5>
+          <p class="tariff__subtitle">Основные вопросы и направления</p>
         </header>
-        <section class="tariff__pricing-consultation">
+        <section class="tariff__pricing">
           <h2 class="tariff__price tariff__price--free">Бесплатно</h2>
-          <h5 class="tariff__price tariff__price--time">В любое время</h5>
+          <p class="tariff__time">В любое время</p>
           <button class="tariff__button">Выбрать</button>
         </section>
         <section class="tariff__features">
-          <ul class="tariff__features">
-            <li class="tariff__feature">В любое удобное время</li>
-            <li class="tariff__feature">Расскажем о всех нюансах процедуры</li>
-            <li class="tariff__feature">
+          <ul class="tariff__feature-list">
+            <li class="tariff__feature-item">В любое удобное время</li>
+            <li class="tariff__feature-item">
+              Расскажем о всех нюансах процедуры
+            </li>
+            <li class="tariff__feature-item">
               Предложим варианты решения вашей проблемы
             </li>
-            <li class="tariff__feature">Подготовим рекомендации</li>
+            <li class="tariff__feature-item">Подготовим рекомендации</li>
           </ul>
         </section>
       </article>
@@ -74,8 +76,6 @@
         <div class="tariff-card__badge tariff-card__badge--best">
           Лучший тариф
         </div>
-
-        <!-- <section class="tariff-card__content"> -->
         <header class="tariff-card__header">
           <svg
             class="tariff-card__icon"
@@ -113,30 +113,29 @@
             </defs>
           </svg>
           <h3 class="tariff__title">Базовый тариф</h3>
-          <h5 class="tariff-card__subtitle">
+          <p class="tariff-card__subtitle">
             От любого банка без процентов и переплат
-          </h5>
+          </p>
         </header>
-
         <section class="tariff-card__pricing">
-          <div class="tariff-card__pricing--price">
+          <div class="tariff-card__pricing-details">
             <h2 class="tariff-card__price">65 000 ₽</h2>
-            <h5 class="tariff-card__payment-type">Единоразовый платеж</h5>
+            <p class="tariff-card__payment-type">Единоразовый платеж</p>
             <button class="tariff__button">Выбрать</button>
           </div>
-          <div class="tariff-card__pricing--close">
-            <div class="info">
-              <div class="left">
-                <div class="left-one">3 454 000 ₽</div>
-                <div class="tariff-card__status tariff-card__status--closed">
-                  погашено
-                </div>
+          <div class="tariff-card__close">
+            <div class="tariff-card__info">
+              <div class="tariff-card__info-left">
+                <p class="tariff-card__amount">3 454 000 ₽</p>
+                <p class="tariff-card__status tariff-card__status--closed">
+                  Погашено
+                </p>
               </div>
-              <div class="center">
-                <div class="tariff-card__guarantee">гарантия</div>
-                <div>списания</div>
+              <div class="tariff-card__info-center">
+                <p class="tariff-card__guarantee">Гарантия</p>
+                <p>Списания</p>
               </div>
-              <div class="tariff-card--icon">
+              <div class="tariff-card__icon-wrapper">
                 <svg
                   width="20"
                   height="20"
@@ -180,30 +179,14 @@
                     </filter>
                   </defs>
                 </svg>
-                <span class="tariff-card-tooltip"
-                  >Для Вашего спокойствия мы гарантируем возврат оплаты в случае
-                  отсутствия списания долгов после процедуры.</span
-                >
+                <span class="tariff-card-tooltip">
+                  Для Вашего спокойствия мы гарантируем возврат оплаты в случае
+                  отсутствия списания долгов после процедуры.
+                </span>
               </div>
             </div>
           </div>
-          <!-- <div class="content">
-            <div class="info">
-                <div class="left">
-                    <div class="left-one">3 454 000 ₽</div>
-                    <div class="left-two">Погашено</div>
-                </div>
-                <div class="center">
-                    <div>Гарантия</div>
-                    <div>списания</div>
-                </div>
-                <div class="right">
-                    ?
-                </div>
-            </div>
-        </div> -->
         </section>
-
         <section class="tariff-card__features">
           <ul class="tariff-card__feature-list">
             <li class="tariff-card__feature-item">
@@ -223,10 +206,8 @@
             </li>
           </ul>
         </section>
-        <!-- </section> -->
       </article>
-
-      <article class="tariff tariffs__tariff tariffs__tariff--credit">
+      <article class="tariff tariff--credit">
         <div class="tariff__badge tariff__badge--installment">
           <svg
             width="16"
@@ -240,9 +221,9 @@
               fill="#F24C41"
             />
           </svg>
-          <div class="timer">22:36:10</div>
+          <time class="tariff__timer">22:36:10</time>
         </div>
-        <header class="tariff__icon">
+        <header class="tariff__header">
           <svg
             width="80"
             height="80"
@@ -278,20 +259,22 @@
             </defs>
           </svg>
           <h3 class="tariff__title">Рассрочка</h3>
-          <h5 class="tariff__subtitle">
+          <p class="tariff__subtitle">
             От любого банка без процентов и переплат
-          </h5>
+          </p>
         </header>
-        <section class="tariff__pricing-credit">
-          <div class="tariff__pricing-credit-price">
+        <section class="tariff__pricing">
+          <div class="tariff__pricing-details">
             <h2 class="tariff__price">3880 ₽ / мес.</h2>
-            <h5 class="tariff__payment-type">На 24 месяца</h5>
-            <button class="tariff__button">Выбрать</button>
+            <p class="tariff__payment-type">На 24 месяца</p>
+            <button class="tariff__button tariff__button-credit">
+              Выбрать
+            </button>
           </div>
-          <div class="tariff-card--close">
-            <div class="tariff__closed">ПОГАШЕНО</div>
-            <div class="tariff__guarantee">ГАРАНТИЯ СПИСАНИЯ</div>
-            <div class="tariff-card--icon">
+          <div class="tariff__close">
+            <p class="tariff__status tariff__status--closed">погашено</p>
+            <p class="tariff__guarantee">гарантия списания</p>
+            <div class="tariff-card__icon-wrapper">
               <svg
                 width="20"
                 height="20"
@@ -332,16 +315,16 @@
                   </filter>
                 </defs>
               </svg>
-              <span class="tariff-card-tooltip"
-                >Для Вашего спокойствия мы гарантируем возврат оплаты в случае
-                отсутствия списания долгов после процедуры.</span
-              >
+              <span class="tariff-card-tooltip">
+                Для Вашего спокойствия мы гарантируем возврат оплаты в случае
+                отсутствия списания долгов после процедуры.
+              </span>
             </div>
           </div>
         </section>
         <section class="tariff__features">
-          <ul class="tariff__features">
-            <li class="tariff__feature">
+          <ul class="tariff__feature-list">
+            <li class="tariff__feature-item">
               Удобные варианты рассрочки
               <svg
                 width="52"
@@ -475,10 +458,12 @@
                 </defs>
               </svg>
             </li>
-            <li class="tariff__feature">Комфортные условия оплаты</li>
-            <li class="tariff__feature">Фиксированная сумма</li>
-            <li class="tariff__feature">Гарантия возврата средств</li>
-            <li class="tariff__feature">Остальное, что и в базовом тарифе</li>
+            <li class="tariff__feature-item">Комфортные условия оплаты</li>
+            <li class="tariff__feature-item">Фиксированная сумма</li>
+            <li class="tariff__feature-item">Гарантия возврата средств</li>
+            <li class="tariff__feature-item">
+              Остальное, что и в базовом тарифе
+            </li>
           </ul>
         </section>
       </article>

@@ -1,6 +1,6 @@
 ﻿import "./styles.scss";
 
-const timerDiv = document.querySelector<HTMLButtonElement>(".timer");
+const timerDiv = document.querySelector<HTMLButtonElement>(".tariff__timer");
 const button = document.querySelector<HTMLButtonElement>(
   ".tariff__button-credit"
 );
