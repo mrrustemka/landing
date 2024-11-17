@@ -12,17 +12,19 @@ body {
   background-color: $bg-grey;
   color: $black;
   text-align: center;
-  padding: 20px;
+  margin: 48px auto;
+  padding: 0;
 }
 
 // Header Styles
 .header {
+  margin: 0 auto;
   &__subtitle {
     font-weight: 400;
     font-size: 16px;
     color: #c3c8cf;
     text-transform: uppercase;
-    margin: 48px auto 0;
+    margin: 0;
   }
 
   &__title {
@@ -82,6 +84,8 @@ body {
         font-weight: 400;
         font-size: 16px;
         padding-left: 24px;
+        text-align: left;
+        display: flex;
 
         &::before {
           content: "";
@@ -131,19 +135,38 @@ body {
       left: 16px;
     }
   }
+
+  .tariff-card__info {
+    background-color: #2557f6;
+    border-radius: 16px;
+    padding: 32px 24px 24px;
+    &-left {
+      background: #5b82ff;
+    }
+  }
+
+  &__price {
+    margin: 0;
+  }
+
+  .tariff-card__icon-wrapper {
+    color: #2557f6;
+  }
 }
 
 // Tariff Card Styles
 .tariff-card {
   padding: 32px 12px;
   &--basic {
+    position: relative;
     border-radius: 24px;
     border: 4px solid transparent;
     border-image: linear-gradient(#e0b330, #fbee88, #e0b330) 1;
 
     .tariff-card__badge--best {
       background: linear-gradient(#fff289, #d2a41d);
-      border-radius: 16px;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
       padding: 6px 12px;
       margin: 0 auto;
       font-weight: 600;
@@ -152,6 +175,7 @@ body {
       top: -32px;
       left: 50%;
       transform: translateX(-50%);
+      color: $white;
     }
   }
 
@@ -204,7 +228,118 @@ body {
     background: linear-gradient(#e0b330, #fbee88, #e0b330);
     border-radius: 16px;
     margin: 8px 0 0;
-    padding: 12px;
+  }
+
+  &__info {
+    padding: 12.5px 16px 7.5px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: auto;
+    height: 72px;
+    &-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      background: linear-gradient(180deg, #fbee88 0%, #e0b330 100%);
+      border-radius: 7px;
+      transform: rotate(-24deg);
+    }
+  }
+
+  &__amount {
+    font-size: 11.73px;
+    font-weight: 700;
+    line-height: 14.97px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: $white;
+    margin-bottom: 23px;
+    margin-top: 0;
+    text-decoration: line-through;
+  }
+
+  &__status {
+    font-size: 27.33px;
+    font-weight: 700;
+    line-height: 34.88px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: $white;
+    margin: 0;
+  }
+
+  &__info-center {
+    font-size: 27.33px;
+    font-weight: 700;
+    line-height: 34.88px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: $white;
+    p {
+      margin: 0;
+    }
+  }
+
+  &__icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff99;
+    width: 28px;
+    height: 20px;
+    border-radius: 50%;
+    color: #e0b330;
+    cursor: pointer;
+    position: relative;
+    .tariff-card-tooltip {
+      display: none;
+      position: absolute;
+      top: 32px;
+      left: -50px;
+      transform: translateX(-50%);
+      color: $white;
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-size: 12px;
+      white-space: nowrap;
+      z-index: 10;
+      background-color: $black;
+      width: 320px;
+      height: auto;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent $black transparent;
+      }
+    }
+
+    &:hover .tariff-card-tooltip {
+      // display: block;
+    }
+  }
+}
+
+.tariff--credit {
+  .tariff__pricing {
+    padding-bottom: 8px;
+  }
+  .tariff-card__close {
+    background: transparent;
   }
 }
 
