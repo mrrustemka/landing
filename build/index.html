@@ -11,7 +11,10 @@
       <h1 class="header__title">Актуальные тарифы</h1>
     </header>
     <main class="tariffs">
-      <article class="tariff tariff--consultation">
+      <article
+        class="tariff tariff--consultation"
+        aria-labelledby="consultation-title"
+      >
         <header class="tariff__header">
           <svg
             width="80"
@@ -19,6 +22,7 @@
             viewBox="0 0 80 80"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
           >
             <rect
               x="5"
@@ -51,13 +55,17 @@
               </linearGradient>
             </defs>
           </svg>
-          <h3 class="tariff__title">Консультация</h3>
+          <h3 class="tariff__title" id="consultation-title">Консультация</h3>
           <p class="tariff__subtitle">Основные вопросы и направления</p>
         </header>
-        <section class="tariff__pricing">
-          <h2 class="tariff__price tariff__price--free">Бесплатно</h2>
+        <section class="tariff__pricing" aria-labelledby="consultation-price">
+          <h2 class="tariff__price tariff__price--free" id="consultation-price">
+            Бесплатно
+          </h2>
           <p class="tariff__time">В любое время</p>
-          <button class="tariff__button">Выбрать</button>
+          <button class="tariff__button" aria-label="Выбрать консультацию">
+            Выбрать
+          </button>
         </section>
         <section class="tariff__features">
           <ul class="tariff__feature-list">
@@ -72,7 +80,10 @@
           </ul>
         </section>
       </article>
-      <article class="tariff-card tariff-card--basic">
+      <article
+        class="tariff-card tariff-card--basic"
+        aria-labelledby="basic-title"
+      >
         <div class="tariff-card__badge tariff-card__badge--best">
           Лучший тариф
         </div>
@@ -84,6 +95,7 @@
             viewBox="0 0 80 80"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
           >
             <rect
               x="5"
@@ -112,22 +124,27 @@
               </linearGradient>
             </defs>
           </svg>
-          <h3 class="tariff__title">Базовый тариф</h3>
+          <h3 class="tariff__title" id="basic-title">Базовый тариф</h3>
           <p class="tariff-card__subtitle">
             От любого банка без процентов и переплат
           </p>
         </header>
-        <section class="tariff-card__pricing">
+        <section class="tariff-card__pricing" aria-labelledby="basic-price">
           <div class="tariff-card__pricing-details">
-            <h2 class="tariff-card__price">65 000 ₽</h2>
+            <h2 class="tariff-card__price" id="basic-price">65 000 ₽</h2>
             <p class="tariff-card__payment-type">Единоразовый платеж</p>
-            <button class="tariff__button">Выбрать</button>
+            <button class="tariff__button" aria-label="Выбрать базовый тариф">
+              Выбрать
+            </button>
           </div>
           <div class="tariff-card__close">
             <div class="tariff-card__info">
               <div class="tariff-card__info-left">
                 <p class="tariff-card__amount">3 454 000 ₽</p>
-                <p class="tariff-card__status tariff-card__status--closed">
+                <p
+                  class="tariff-card__status tariff-card__status--closed"
+                  aria-label="Статус погашено"
+                >
                   Погашено
                 </p>
               </div>
@@ -135,9 +152,15 @@
                 <p class="tariff-card__guarantee">Гарантия</p>
                 <p>Списания</p>
               </div>
-              <div class="tariff-card__icon-wrapper">
+              <div
+                class="tariff-card__icon-wrapper"
+                tabindex="0"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-label="Подробнее о гарантии списания"
+              >
                 ?
-                <span class="tariff-card-tooltip">
+                <span class="tariff-card-tooltip" role="tooltip">
                   Для Вашего спокойствия мы гарантируем возврат оплаты в случае
                   отсутствия списания долгов после процедуры.
                 </span>
@@ -165,7 +188,7 @@
           </ul>
         </section>
       </article>
-      <article class="tariff tariff--credit">
+      <article class="tariff tariff--credit" aria-labelledby="credit-title">
         <div class="tariff__badge tariff__badge--installment">
           <svg
             width="16"
@@ -173,13 +196,18 @@
             viewBox="0 0 16 16"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
           >
             <path
               d="M8.00001 1.33334C4.32668 1.33334 1.33334 4.32668 1.33334 8.00001C1.33334 11.6733 4.32668 14.6667 8.00001 14.6667C11.6733 14.6667 14.6667 11.6733 14.6667 8.00001C14.6667 4.32668 11.6733 1.33334 8.00001 1.33334ZM10.9 10.38C10.8067 10.54 10.64 10.6267 10.4667 10.6267C10.38 10.6267 10.2933 10.6067 10.2133 10.5533L8.14668 9.32001C7.63334 9.01334 7.25334 8.34001 7.25334 7.74668V5.01334C7.25334 4.74001 7.48001 4.51334 7.75334 4.51334C8.02668 4.51334 8.25334 4.74001 8.25334 5.01334V7.74668C8.25334 7.98668 8.45334 8.34001 8.66001 8.46001L10.7267 9.69334C10.9667 9.83334 11.0467 10.14 10.9 10.38Z"
               fill="#F24C41"
             />
           </svg>
-          <time class="tariff__timer">22:36:10</time>
+          <time
+            class="tariff__timer"
+            aria-label="Осталось времени: 22 часа, 36 минут, 10 секунд"
+            >22:36:10</time
+          >
         </div>
         <header class="tariff__header">
           <svg
@@ -188,6 +216,7 @@
             viewBox="0 0 80 80"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
           >
             <rect
               x="5"
@@ -216,16 +245,19 @@
               </linearGradient>
             </defs>
           </svg>
-          <h3 class="tariff__title">Рассрочка</h3>
+          <h3 class="tariff__title" id="credit-title">Рассрочка</h3>
           <p class="tariff__subtitle">
             От любого банка без процентов и переплат
           </p>
         </header>
-        <section class="tariff__pricing">
+        <section class="tariff__pricing" aria-labelledby="credit-price">
           <div class="tariff__pricing-details">
-            <h2 class="tariff__price">3880 ₽ / мес.</h2>
+            <h2 class="tariff__price" id="credit-price">3880 ₽ / мес.</h2>
             <p class="tariff__payment-type">На 24 месяца</p>
-            <button class="tariff__button tariff__button-credit">
+            <button
+              class="tariff__button tariff__button-credit"
+              aria-label="Выбрать рассрочку"
+            >
               Выбрать
             </button>
           </div>
@@ -234,7 +266,10 @@
           <div class="tariff-card__info">
             <div class="tariff-card__info-left">
               <p class="tariff-card__amount">3 454 000 ₽</p>
-              <p class="tariff-card__status tariff-card__status--closed">
+              <p
+                class="tariff-card__status tariff-card__status--closed"
+                aria-label="Статус погашено"
+              >
                 Погашено
               </p>
             </div>
@@ -242,9 +277,15 @@
               <p class="tariff-card__guarantee">Гарантия</p>
               <p>Списания</p>
             </div>
-            <div class="tariff-card__icon-wrapper">
+            <div
+              class="tariff-card__icon-wrapper"
+              tabindex="0"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-label="Подробнее о гарантии списания"
+            >
               ?
-              <span class="tariff-card-tooltip">
+              <span class="tariff-card-tooltip" role="tooltip">
                 Для Вашего спокойствия мы гарантируем возврат оплаты в случае
                 отсутствия списания долгов после процедуры.
               </span>
@@ -262,6 +303,7 @@
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
               >
                 <rect
                   x="0.5"

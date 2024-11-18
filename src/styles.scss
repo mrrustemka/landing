@@ -160,8 +160,7 @@ body {
   &--basic {
     position: relative;
     border-radius: 24px;
-    border: 4px solid transparent;
-    border-image: linear-gradient(#e0b330, #fbee88, #e0b330) 1;
+    border: 4px solid #e0b330;
 
     .tariff-card__badge--best {
       background: linear-gradient(#fff289, #d2a41d);
